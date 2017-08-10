@@ -1,0 +1,299 @@
+ <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        .blank_line {
+            margin:32px 0 15px 0;
+            border-bottom: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+      <div class="col-xs-12">
+        <h2>Setting up a budget</h2>
+        <p style="font-weight:bold;">Directions:<br />Use a budget sheet to set up a monthly budget for <span class="person_name"></span>. Write her expected income and expenses in the “budget” column of the form.</p>
+
+        <h3>Case Application</h3>
+        <h4><span class="person_name"></span>’s Planned Monthly Income</h4>
+        <p>
+          <span class="person_name"></span> works part-time at <span class="place_1"></span>.  
+          <span class="cond_place_2">She also works part time at <span class="place_2"></span>.  </span>
+        	<span class="cond_place_3">She sometimes even works at <span class="place_3"></span>!  <span class="person_name"></span>'s very very busy.</span>
+          <span class="person_name"></span> expects to make $<span class="job_values_1"></span> from her first job.
+            <span class="cond_place_2">Her second job should pay $<span class="job_values_2"></span>.  </span>
+        	<span class="cond_place_3">Finally, if she is able to work all her hours, her third job should pay $<span class="job_values_3"></span></span>
+        </p>
+        
+        <h4><span class="person_name"></span>’s Planned Monthly Exenses</h4>
+        <p>
+          1. Fixed Expenses:<br />
+        	<ul class="fixed_expenses_list"></ul>
+        </p>
+        
+        <p>
+          2. Flexible Expenses:<br />
+        	<ul class="flexible_expenses_list"></ul>
+        </p>
+    
+    		<table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Income</th>
+              <th>Budget</th>
+              <th>Actual</th>
+              <th>Difference</th>
+            </tr>
+          </thead>
+          <tbody>
+          	<tr>                     <td>Job #1</td>              <td>$</td><td>$</td><td>$</td></tr>
+          	<tr class="cond_place_2"><td>Job #2</td>              <td>$</td><td>$</td><td>$</td></tr>
+          	<tr class="cond_place_3"><td>Job #3</td>              <td>$</td><td>$</td><td>$</td></tr>
+          	<tr>                     <td>Other</td>               <td>$</td><td>$</td><td>$</td></tr>
+          	<tr>                     <td>Total Monthly Income</td><td>$</td><td>$</td><td>$</td></tr>
+          </tbody>
+    		</table>
+        
+      	<table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Expenses</th>
+              <th>Budget</th>
+              <th>Actual</th>
+              <th>Difference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="fixed_expenses_table"><td colspan="4"><strong>Fixed Expenses</strong></td></tr>
+            <tr class="flexible_expenses_table"><td colspan="4"><strong>Flexible Expenses</strong></td></tr>
+            <tr><td colspan="4"><strong>Other</strong></td></tr>
+            <tr><td></td> <td>$</td><td>$</td><td>$</td></tr>
+            <tr><td></td> <td>$</td><td>$</td><td>$</td></tr>
+            
+            <tr><td>Total Monthly Expenses</td><td>$</td><td>$</td><td>$</td></tr>
+          </tbody>
+    		</table>
+      
+        <br/><br/>
+        
+        <h2>Reworking a budget</h2>
+        <p style="font-weight:bold;">Directions:<br /><span class="person_name"></span> had some surprises this month! Write her actual income and expenses in the "actual” column of her budget form. Compare her planned income and expenses to her actual income and expenses. Then answer the questions below.</p>
+        
+        <h4><span class="person_name"></span>’s Actual Monthly Income</h4>
+        <p class="income_variance"></p>
+        
+        <h4><span class="person_name"></span>’s Actual Monthly Exenses</h4>
+        <p>
+          1. Fixed Expenses:<br />
+        	<ul class="fixed_expenses_actual_list"></ul>
+        </p>
+        
+        <p>
+          2. Flexible Expenses:<br />
+        	<ul class="flexible_expenses_actual_list"></ul>
+        </p>
+        
+        <p><strong>Unexpected Events!!!  </strong><br /><ul class="unexpected_events"></ul></p>
+        
+        <h3>Questions:</h3>
+        <p>1.What is the difference between Kelly’s planned expenses and her actual expenses?</p>
+        <div class="blank_line"></div>
+        <p>2. In what categories did she overspend?</p>
+        <div class="blank_line"></div>
+        <p>3. In what categories did she spend less than she planned?</p>
+        <div class="blank_line"></div>
+        <p>4. How much did she spend for the use of her car this month?</p>
+        <div class="blank_line"></div>
+        <p>5. How much money did she have at the end of the month to put into savings?</p>
+        <div class="blank_line"></div>
+        
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function pull_from_list(lst) {
+        var index = Math.floor(Math.random() * lst.length)
+      	return [lst[index], [...lst.slice(0,index), ...lst.slice(index + 1)]]
+      }
+      function get_val_from_base(base) {
+        var min = Math.floor(base * .8)
+        var max = Math.ceil(base * 1.2)
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+      $(function(){
+      	var person_name = "";
+        var place_1 = "";
+        var place_2 = "";
+        var place_3 = "";
+      	var fixed_expenses_list = "";
+      	var fixed_expenses_table = "";
+        var fixed_expenses_actual_list = "";
+      	var flexible_expenses_list = "";
+      	var flexible_expenses_table = "";
+        var flexible_expenses_actual_list = "";
+      	var income_variance = "";
+      	var unexpected_events = "";
+        var job_values_str = "";
+        
+        var tmp = ""
+        
+        var planned_income = []
+        var actual_income = 0
+        var planned_expenses = []
+        var actual_expenses = []
+        
+        var names = [ "Mary", "Patricia", "Jennifer", "Elizabeth", "Linda", "Barbara", "Susan", "Jessica", "Margaret", "Sarah", "Karen", "Nancy", "Betty", "Lisa", "Dorothy", "Sandra", "Ashley", "Kimberly", "Donna", "Carol", "Michelle", "Emily", "Amanda", "Helen", "Melissa", "Deborah", "Stephanie", "Laura", "Rebecca", "Sharon", "Cynthia", "Kathleen", "Amy", "Shirley", "Anna", "Angela", "Ruth", "Brenda", "Pamela", "Nicole", "Katherine", "Virginia", "Catherine", "Christine", "Samantha", "Debra", "Janet", "Rachel", "Carolyn", "Emma", "Maria", "Heather", "Diane", "Julie", "Joyce", "Evelyn", "Frances", "Joan", "Christina", "Kelly", "Victoria", "Lauren", "Martha", "Judith", "Cheryl", "Megan", "Andrea", "Ann", "Alice", "Jean", "Doris", "Jacqueline", "Kathryn", "Hannah", "Olivia", "Gloria", "Marie", "Teresa", "Sara", "Janice", "Julia", "Grace", "Judy", "Theresa", "Rose", "Beverly", "Denise", "Marilyn", "Amber", "Madison", "Danielle", "Brittany", "Diana", "Abigail", "Jane", "Natalie", "Lori", "Tiffany", "Alexis", "Kayla" ]
+      	var places = [ "a bakery", "a bar", "a beauty school", "a beef farm", "a boat charter", "a book store", "a bridal shop", "a cafe", "a candy shop", "a car wash", "a cafeteria", "a candle shop", "a catering business", "a day care", "a movie theater", "a computer store", "a pizza parlor", "a cookie shop", "the local courthouse", "a costume shop", "the mall", "Books-a-Million", "McDonald's", "Burger King", "Taco Bell", "Chic-fil-a", "Steak and Shake", "Golden Corral", "the drug store", "Arby's", "Subway", "Dunkin' Donuts", "Pizza Hut", "KFC", "Dairy Queen", "an ice cream parlor", "Chipotle", "Papa John's", "an automotive factory", "Food Lion", "Wegman's", "Checker's", "Shop Rite", "Shoppers", "Wal-Mart", "Royal Farms", "a gas station", "an engineering firm", "GameStop", "a local farm", "an art gallery", "a museum", "a funeral home", "a furniture store", "a florist", "a gymnastic studio", "a trucking company", "a law firm", "a hospital", "a doctor's office", "a dog walking company", "a hotel", "a housekeeping company", "a hot tub repair company", "the local hobby shop", "a computer repair shop", "an insurance agency", "a jewelery store", "a landscaping company", "a dry cleaners", "a limousine service", "a liquor store", "a logging company", "the local post office", "a nail salon", "a microbrewery", "a moving company", "Guitar Center", "a nursery", "a dentist's office", "a pet store", "the zoo", "a piano shop", "a local horse stable", "a roofing company", "a skate shop", "a thrift store", "Goodwill", "a toy store", "a yoga studio" ]
+        
+        var fixed_expenses = [["Rent", get_val_from_base(200)]]  
+        var opt_fixed_expenses = [["Car payment", get_val_from_base(120)], ["Car insurance", get_val_from_base(50)], ["Renter's insurance", get_val_from_base(20)], ["HOA Fees", get_val_from_base(40)], ["Student loan payments", get_val_from_base(75)]]
+        var actual_fixed_expenses = []
+        
+        var flexible_expenses = [["Food", get_val_from_base(150)], ["Gas and oil", get_val_from_base(40)], ["Entertainment", get_val_from_base(60)]]
+        var opt_flexible_expenses = [["Savings for trade school", get_val_from_base(100)], ["Clothes", get_val_from_base(50)], ["Personal items", get_val_from_base(30)], ["Bus fare", get_val_from_base(20)], ["Parking/tolls", get_val_from_base(20)], ["Household items", get_val_from_base(30)], ["School books", get_val_from_base(80)], ["Field trip fees", get_val_from_base(40)], ["Gas bill", get_val_from_base(20)], ["Electric bill", get_val_from_base(70)]]        
+        var actual_flexible_expenses = []
+        
+        var extra_flexible_expenses = [["Birthday present for mom", get_val_from_base(25)], ["Car maintenance", get_val_from_base(30)], ["School registration fees", get_val_from_base(50)], ["Bought a new checkbook", get_val_from_base(20)]]
+        
+        var opt_windfalls = [["Found a $100 bill", 100], ["Birthday present", get_val_from_base(150)], ["Won a bet", get_val_from_base(130)], ["Christmas bonus", get_val_from_base(200)]]
+        var opt_anti_windfalls = [["Speeding Ticket", get_val_from_base(130)], ["Hired exterminator (apartment had fleas)", get_val_from_base(110)], ]
+        
+        var job_count = Math.floor(Math.random() * 3) + 1
+        var fixed_expenses_count = Math.floor(Math.random() * 3) + 1
+        var flexible_expenses_count = Math.floor(Math.random() * 4) + 1
+        
+        person_name = pull_from_list(names)[0]
+      	$(".person_name").html(person_name)
+        
+        tmp = pull_from_list(places)
+        place_1 = tmp[0]; places = tmp[1]
+        $(".place_1").html(place_1)
+        var income1 = get_val_from_base(600)
+        $(".job_values_1").html(income1)
+        planned_income.push([place_1, income1])
+        if(job_count > 1) { 
+          tmp = pull_from_list(places)
+          place_2 = tmp[0]; places = tmp[1]
+          var income2 = get_val_from_base(600)
+          $(".job_values_2").html(income2)
+          planned_income.push([place_2, income2])
+          $(".place_2").html(place_2)
+        } else { 
+            $(".cond_place_2").css("display", "none") 
+        }
+        if(job_count > 2) { 
+          tmp = pull_from_list(places)
+          place_3 = tmp[0]; places = tmp[1]
+          var income3 = get_val_from_base(400);
+          $(".job_values_3").html(income3)
+          planned_income.push([place_3, income3])
+          $(".place_3").html(place_3)
+        } else { 
+            $(".cond_place_3").css("display", "none") 
+        }
+        
+        for(var i = 0; i <= fixed_expenses_count; i++) { 
+          tmp = pull_from_list(opt_fixed_expenses)
+          opt_fixed_expenses = tmp[1]
+          fixed_expenses.push(tmp[0])
+        }
+        for(var i = 0; i <= flexible_expenses_count; i++) { 
+          tmp = pull_from_list(opt_flexible_expenses)
+          opt_flexible_expenses = tmp[1]
+        	flexible_expenses.push(tmp[0])
+        }
+        
+        for(var i in fixed_expenses) { 
+        	actual_fixed_expenses.push([fixed_expenses[i][0], get_val_from_base(fixed_expenses[i][1])])
+        }                                                  
+        var extra_flexible_expenses_count = Math.floor(Math.random() * 3)
+        for(var i in flexible_expenses) { 
+        	actual_flexible_expenses.push([flexible_expenses[i][0], get_val_from_base([flexible_expenses[i][1]])])
+        }
+        for(var i = 0; i <= extra_flexible_expenses_count; i++){
+          tmp = pull_from_list(extra_flexible_expenses)
+          extra_flexible_expenses = tmp[1]
+        	actual_flexible_expenses.push(tmp[0])
+        }
+        actual_expenses = [...actual_fixed_expenses, ...actual_flexible_expenses]
+        
+                                                                          
+                   
+        for (var i in fixed_expenses) { 
+      		fixed_expenses_list += "<li>" + fixed_expenses[i][0] + ": $" + fixed_expenses[i][1] + "</li>";
+        }
+        $(".fixed_expenses_list").html(fixed_expenses_list)
+        for (var i in fixed_expenses) { 
+      		fixed_expenses_table += "<tr><td>" + fixed_expenses[i][0] + "</td><td>$</td><td>$</td><td>$</td></tr>";
+        }
+        $(".fixed_expenses_table").after(fixed_expenses_table)
+        for (var i in flexible_expenses) { 
+      		flexible_expenses_list += "<li>" + flexible_expenses[i][0] + ": $" + flexible_expenses[i][1] + "</li>";
+        }
+        $(".flexible_expenses_list").html(flexible_expenses_list)
+        for (var i in fixed_expenses) { 
+      		flexible_expenses_table += "<tr><td>" + flexible_expenses[i][0] + "</td><td>$</td><td>$</td><td>$</td></tr>";
+        }
+        $(".flexible_expenses_table").after(flexible_expenses_table)
+        
+        for (var i in actual_fixed_expenses) { 
+      		fixed_expenses_actual_list += "<li>" + actual_fixed_expenses[i][0] + ": $" + actual_fixed_expenses[i][1] + "</li>";
+        }
+        $(".fixed_expenses_actual_list").html(fixed_expenses_actual_list)
+        for (var i in actual_flexible_expenses) { 
+      		flexible_expenses_actual_list += "<li>" + actual_flexible_expenses[i][0] + ": $" + actual_flexible_expenses[i][1] + "</li>";
+        }
+        $(".flexible_expenses_actual_list").html(flexible_expenses_actual_list)
+                                     
+                                     
+        
+        var planned_income_sum = planned_income.map(function(val){ return val[1] }).reduce(function(sum, val){ return sum + val });
+        actual_income = get_val_from_base(planned_income_sum)
+          console.log(planned_income_sum)
+        //$(".job_values_str").html("$" + planned_income_sum)
+        if(actual_income > planned_income_sum) {
+        	$(".income_variance").html(person_name + " worked overtime this week and made an additional $" + (actual_income - planned_income_sum) + "!")
+        } else if(actual_income < planned_income_sum) {
+        	$(".income_variance").html(person_name + " had to take some sick leave this week.  Therefore, she made $" + (planned_income_sum - actual_income) + " less than planned.")
+        } else {
+        	$(".income_variance").html(person_name + " made exactly what she expected this week.")
+        }
+          
+        var tot_planned_expenses = actual_expenses.reduce(function(sum, val){ return sum + val[1] });
+        if(actual_income > tot_planned_expenses) {
+          tmp = pull_from_list(opt_anti_windfalls)
+          opt_anti_windfalls = tmp[1]
+          actual_expenses.push(tmp[0])
+          tot_planned_expenses = actual_expenses.reduce(function(sum, val){ return sum + val[1] });
+          $(".unexpected_events").append("<li>"+ tmp[0][0] + ": $" + tmp[0][1] +"</li>")
+        	if(actual_income > tot_planned_expenses) { 
+            tmp = pull_from_list(opt_anti_windfalls)
+            opt_anti_windfalls = tmp[1]
+            actual_expenses.push(tmp[0])
+            tot_planned_expenses = actual_expenses.reduce(function(sum, val){ return sum + val[1] });
+            $(".unexpected_events").append("<li>"+ tmp[0][0] + ": $" + tmp[0][1] +"</li>")
+          }
+        } else {
+          tmp = pull_from_list(opt_windfalls)
+          opt_windfalls = tmp[1]
+        	actual_income += tmp[0][1]
+          $(".unexpected_events").append("<li>"+ tmp[0][0] + ": $" + tmp[0][1] +"</li>")
+        	if(actual_income < tot_planned_expenses) { 
+            tmp = pull_from_list(opt_windfalls)
+            opt_windfalls = tmp[1]
+            actual_income += tmp[0][1]
+            $(".unexpected_events").append("<li>"+ tmp[0][0] + ": $" + tmp[0][1] +"</li>")
+          }
+        }
+        
+      });
+    </script>
+  </body>
+</html>
